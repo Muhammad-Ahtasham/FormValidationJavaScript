@@ -4,6 +4,8 @@ const email = document.getElementById('email');
 const phone = document.getElementById('phone');
 let success = document.getElementById('success');
 let danger = document.getElementById('danger');
+let boldText = document.getElementById('boldText');
+let gText = document.getElementById('gText');
 // console.log(username, phone, email); 
 username.addEventListener('blur', ()=>{
     console.log('blur name');
@@ -12,9 +14,12 @@ username.addEventListener('blur', ()=>{
     console.log(str, regex);
     if(regex.test(str)){
         console.log('congrats it matched');
+        // success.classList.remove(); 
+        // success.removeAttribute('class', 'show alert-danger')
     }
     else{
-        danger.classList.add('show')
+        // success.addAttribute('class', 'show alert-danger');
+        // success.classList.add('show alert-danger');
     }
 });
 email.addEventListener('blur', ()=>{
@@ -24,9 +29,13 @@ email.addEventListener('blur', ()=>{
     console.log(str, regex);
     if(regex.test(str)){
         console.log('congrats it matched');
+        // success.classList.remove('show alert-danger'); 
+        // success.removeAttribute('class', 'show alert-danger')
     }
     else{
         console.log('invallid'); 
+        // success.addAttribute('class', 'show alert-danger');
+        // success.classList.add('show alert-danger'); 
     }
 });
 phone.addEventListener('blur', ()=>{
@@ -36,9 +45,13 @@ phone.addEventListener('blur', ()=>{
     console.log(str, regex);
     if(regex.test(str)){
         console.log('congrats it matched');
+        // success.classList.remove('show alert-danger');
+        // success.removeAttribute('class', 'show alert-danger');
     }
     else{
         console.log('not valid number');
+        // success.addAttribute('class', 'show alert-danger');
+        // success.classList.add('show alert-danger'); 
     }
 });
 
